@@ -5,8 +5,12 @@ const subtract = function(a, b) {
   return a - b;
 }
 
-function divide(a, b){
-  return a / b;
+function divide(a, b) {
+    if (b === 0) {
+        throw new Error("No se puede dividir entre cero");
+    }
+
+    return a / b;
 }
 
 function multiply(a, b){
@@ -50,10 +54,13 @@ function quadraticFormula(a, b, c){
 
 // When you want to use the divide or multiple function, remember to add it to the export here
 module.exports = {
+  
   add: add,
   subtract: subtract,
   average: average,
   factorial: factorial,
   sumNaturalNumbers: sumNaturalNumbers,
-  quadraticFormula: quadraticFormula
+  quadraticFormula: quadraticFormula,
+  divide: divide,
+  multiply: multiply
 };
