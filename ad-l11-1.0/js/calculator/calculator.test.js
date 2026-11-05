@@ -15,3 +15,7 @@ test('subtract 5 - 4 to equal 1', () => {
 test('subtract -5 - -10 to equal 5', () => {
   expect(calculator.subtract(-5, -10)).toBe(5);
 });
+
+test('average 10, 8 and 6 to equal 8', () => {
+  expect(calculator.average([10, 8, 6])).toBe(8);
+});
