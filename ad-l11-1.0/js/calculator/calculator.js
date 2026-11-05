@@ -38,5 +38,22 @@ function sumNaturalNumbers(number){
   return result;
 }
 
+function quadraticFormula(a, b, c){
+  const discriminant = (b * b) - (4 * a * c);
+
+  const x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+  const x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+  return [x1, x2];
+}
+
+
 // When you want to use the divide or multiple function, remember to add it to the export here
-module.exports = {add: add, subtract: subtract, average: average, factorial: factorial, sumNaturalNumbers: sumNaturalNumbers};
+module.exports = {
+  add: add,
+  subtract: subtract,
+  average: average,
+  factorial: factorial,
+  sumNaturalNumbers: sumNaturalNumbers,
+  quadraticFormula: quadraticFormula
+};

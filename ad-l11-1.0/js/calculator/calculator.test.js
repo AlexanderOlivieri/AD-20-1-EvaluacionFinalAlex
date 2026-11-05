@@ -31,3 +31,12 @@ test('factorial of 0 to equal 1', () => {
 test('sum of first 5 natural numbers to equal 15', () => {
   expect(calculator.sumNaturalNumbers(5)).toBe(15);
 });
+
+test('quadratic formula for x² - 3x + 2 = 0', () => {
+  expect(calculator.quadraticFormula(1, -3, 2)).toEqual([2, 1]);
+});
+
+test('quadratic formula with one repeated solution', () => {
+  expect(calculator.quadraticFormula(1, -4, 4)).toEqual([2, 2]);
+});
+
