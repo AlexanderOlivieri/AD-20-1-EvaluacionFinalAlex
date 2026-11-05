@@ -28,3 +28,6 @@ test('factorial of 0 to equal 1', () => {
   expect(calculator.factorial(0)).toBe(1);
 });
 
+test('sum of first 5 natural numbers to equal 15', () => {
+  expect(calculator.sumNaturalNumbers(5)).toBe(15);
+});

@@ -28,5 +28,15 @@ function factorial(number){
   return result;
 }
 
+function sumNaturalNumbers(number){
+  let result = 0;
+
+  for(let i = 1; i <= number; i++){
+    result += i;
+  }
+
+  return result;
+}
+
 // When you want to use the divide or multiple function, remember to add it to the export here
-module.exports = {add: add, subtract: subtract, average: average, factorial: factorial};
+module.exports = {add: add, subtract: subtract, average: average, factorial: factorial, sumNaturalNumbers: sumNaturalNumbers};
