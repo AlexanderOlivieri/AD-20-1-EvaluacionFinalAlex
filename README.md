@@ -1,247 +1,167 @@
-# 🧮 Calculator — JavaScript + Jest
+# AD-20-1 – End of Module Assessment
 
-## 🇪🇸 Español
+## 🇲🇽 Español
 
-Proyecto de práctica para desarrollar y probar funciones matemáticas en **JavaScript**, utilizando **Node.js, npm y Jest**. El objetivo fue aplicar pruebas unitarias y practicar un flujo básico de trabajo con **Git y GitHub**.
+### Descripción del proyecto
 
-## 📋 Ejercicios realizados
+Proyecto de JavaScript desarrollado como parte de la evaluación del módulo de Desarrollo de Aplicaciones. Incluye funciones matemáticas, administración de usuarios y pruebas unitarias utilizando **Jest**.
+function divide(a, b) {
+### Funcionalidades
 
-El proyecto contiene las siguientes funciones:
+#### 1. Calculadora (`Calculator`)
 
-1. **Promedio**
-   - Calcula el promedio de un conjunto de números.
-   - Ejemplo: `average([10, 8, 6])` → `8`
+Implementación de operaciones y funciones matemáticas:
 
-2. **Factorial**
-   - Calcula el factorial de un número.
-   - Ejemplo: `factorial(5)` → `120`
-   - También se contempla el caso `0! = 1`.
+- Suma y resta.
+- Multiplicación y división.
+- Cálculo de promedio.
+- Cálculo de factorial.
+- Suma de los primeros números naturales.
+- Fórmula general para resolver ecuaciones cuadráticas.
+- Validación de división entre cero mediante el lanzamiento de un error.
 
-3. **Suma de números naturales**
-   - Calcula la suma de los primeros `n` números naturales.
-   - Ejemplo: `sumNaturalNumbers(5)` → `15`
+#### 2. Administración de usuarios (`UserController`)
 
-4. **Fórmula general / Chicharronera**
-   - Resuelve ecuaciones cuadráticas de la forma:
-     `ax² + bx + c = 0`
-   - Ejemplo: `quadraticFormula(1, -5, 6)` → `[3, 2]`
+Permite gestionar usuarios mediante las siguientes operaciones:
 
-## 🛠️ Tecnologías utilizadas
+- `add()`: agrega un usuario.
+- `remove()`: elimina un usuario.
+- `getUsers()`: obtiene la lista de usuarios.
+- `findByEmail()`: busca un usuario por correo electrónico.
+- `findById()`: busca un usuario por identificador.
+
+La clase `User` permite crear usuarios con ID, nombre y correo electrónico.
+
+### Pruebas unitarias
+
+Se utilizó **Jest** para verificar el funcionamiento de las operaciones matemáticas y los métodos de administración de usuarios.
+
+Las pruebas contemplan:
+
+- Operaciones de la calculadora.
+- Multiplicación y división.
+test('divide 10 / 2 to equal 5', () => {
+- Agregar y eliminar usuarios.
+- Búsqueda de usuarios por correo electrónico e ID.
+- Casos donde no se encuentra un usuario.
+
+### Desarrollo Basado en Pruebas (TDD)
+
+Se aplicó el ciclo TDD para controlar la división entre cero:
+
+1. **RED:** se creó una prueba que esperaba un error al dividir entre cero.
+2. **GREEN:** se modificó `divide()` para lanzar un error descriptivo cuando el divisor es cero.
+3. **REFACTOR:** se mantuvo la implementación sencilla y legible.
+
+### Tecnologías utilizadas
 
 - JavaScript
 - Node.js
-- npm
 - Jest
 - Git
 - GitHub
 
-## 🧪 Pruebas con Jest
+### Instalación y ejecución
 
-Se implementaron pruebas unitarias para verificar el funcionamiento de cada operación.
+Clona el repositorio:
 
-Para ejecutar las pruebas:
+```bash
+git clone https://github.com/AlexanderOlivieri/AD-20-1-EvaluacionFinalAlex.git
+```
+
+Instala las dependencias:
+
+```bash
+npm install --save-dev jest
+```
+
+Ejecuta las pruebas:
 
 ```bash
 npm test
 ```
-
-También puede utilizarse:
-
-```bash
-npx jest
-```
-
-Las pruebas verifican diferentes escenarios, incluyendo:
-
-- Valores positivos y negativos.
-- Promedios.
-- Factoriales.
-- Casos límite como `0!`.
-- Suma de números naturales.
-- Ecuaciones cuadráticas con soluciones reales.
-- Ecuaciones con una solución repetida.
-
-## 📁 Estructura del proyecto
-
-```text
-calculator-jest/
-│
-├── calculator.js
-├── calculator.test.js
-├── package.json
-└── README.md
-```
-
-### `calculator.js`
-
-Contiene las funciones matemáticas:
-
-```js
-add()
-subtract()
-divide()
-multiply()
-average()
-factorial()
-sumNaturalNumbers()
-quadraticFormula()
-```
-
-### `calculator.test.js`
-
-Contiene las pruebas unitarias realizadas con Jest.
-
-## 🔄 Flujo de trabajo con Git
-
-Durante el desarrollo se utilizaron commits independientes para identificar los cambios realizados en cada tarea.
-
-Ejemplo:
-
-```bash
-git add calculator.js calculator.test.js
-git commit -m "feat: add average calculator and tests"
-git push
-```
-
-Se utilizaron commits relacionados con cada ejercicio para mantener un historial organizado del proyecto.
-
-## 🎯 Objetivo de aprendizaje
-
-Este proyecto permitió practicar:
-
-- Creación de funciones en JavaScript.
-- Uso de `module.exports` y `require`.
-- Creación de pruebas unitarias con Jest.
-- Uso de `expect()` y diferentes matchers como `toBe()` y `toEqual()`.
-- Identificación de casos límite.
-- Ejecución de pruebas mediante npm.
-- Control de versiones con Git.
-- Organización y publicación de un proyecto en GitHub.
 
 ---
 
-# 🇺🇸 English
+## 🇺🇸 English
 
-## 🧮 Calculator — JavaScript + Jest
+### Project Description
 
-Practice project focused on developing and testing mathematical functions using **JavaScript, Node.js, npm, and Jest**. The main goal was to practice unit testing and a basic development workflow with **Git and GitHub**.
+JavaScript project developed as part of the Application Development module assessment. It includes mathematical functions, user management, and unit testing using **Jest**.
 
-## 📋 Exercises Completed
+### Features
 
-The project includes the following functions:
+#### 1. Calculator
 
-1. **Average**
-   - Calculates the average of a set of numbers.
-   - Example: `average([10, 8, 6])` → `8`
+Implementation of mathematical operations and functions:
 
-2. **Factorial**
-   - Calculates the factorial of a number.
-   - Example: `factorial(5)` → `120`
-   - The `0! = 1` case is also covered.
+- Addition and subtraction.
+- Multiplication and division.
+- Average calculation.
+- Factorial calculation.
+- Sum of the first natural numbers.
+- Quadratic formula.
+- Division-by-zero validation using error handling.
 
-3. **Sum of Natural Numbers**
-   - Calculates the sum of the first `n` natural numbers.
-   - Example: `sumNaturalNumbers(5)` → `15`
+#### 2. User Management (`UserController`)
 
-4. **Quadratic Formula**
-   - Solves quadratic equations in the form:
-     `ax² + bx + c = 0`
-   - Example: `quadraticFormula(1, -5, 6)` → `[3, 2]`
+Provides basic user management operations:
 
-## 🛠️ Technologies Used
+- `add()`: adds a user.
+- `remove()`: removes a user.
+- `getUsers()`: retrieves the user list.
+- `findByEmail()`: searches for a user by email.
+- `findById()`: searches for a user by ID.
+
+The `User` class creates users with an ID, name, and email address.
+
+### Unit Testing
+
+**Jest** was used to verify mathematical operations and user management methods.
+
+The tests cover:
+
+- Calculator operations.
+- Multiplication and division.
+- Division-by-zero handling.
+- Adding and removing users.
+- Searching users by email and ID.
+- Cases where a user cannot be found.
+
+### Test-Driven Development (TDD)
+
+The TDD cycle was applied to handle division by zero:
+
+1. **RED:** created a test expecting an error when dividing by zero.
+2. **GREEN:** updated `divide()` to throw a descriptive error when the divisor is zero.
+3. **REFACTOR:** kept the implementation simple and readable.
+
+### Technologies
 
 - JavaScript
 - Node.js
-- npm
 - Jest
 - Git
 - GitHub
 
-## 🧪 Jest Tests
+### Installation and Execution
 
-Unit tests were created to verify the behavior of each function.
-
-To run the tests:
+Clone the repository:
 
 ```bash
-npm test
+git clone https://github.com/AlexanderOlivieri/AD-20-1-EvaluacionFinalAlex.git
 ```
 
-You can also run:
+Install dependencies:
 
 ```bash
-npx jest
+npm install --save-dev jest
 ```
 
-The tests cover different scenarios, including:
-
-- Positive and negative values.
-- Average calculations.
-- Factorials.
-- Edge cases such as `0!`.
-- Natural number sums.
-- Quadratic equations with real solutions.
-- Quadratic equations with repeated solutions.
-
-## 📁 Project Structure
-
-```text
-calculator-jest/
-│
-├── calculator.js
-├── calculator.test.js
-├── package.json
-└── README.md
-```
-
-### `calculator.js`
-
-Contains the mathematical functions:
-
-```js
-add()
-subtract()
-divide()
-multiply()
-average()
-factorial()
-sumNaturalNumbers()
-quadraticFormula()
-```
-
-### `calculator.test.js`
-
-Contains the unit tests implemented with Jest.
-
-## 🔄 Git Workflow
-
-The project was developed using independent commits to keep track of the changes made for each task.
-
-Example:
+Run the tests:
 
 ```bash
-git add calculator.js calculator.test.js
-git commit -m "feat: add average calculator and tests"
-git push
+npm install --save-dev jest
 ```
 
-Separate commits were used for each exercise to maintain an organized project history.
 
-## 🎯 Learning Objectives
-
-This project helped practice:
-
-- Creating functions in JavaScript.
-- Using `module.exports` and `require`.
-- Writing unit tests with Jest.
-- Using `expect()` and matchers such as `toBe()` and `toEqual()`.
-- Identifying edge cases.
-- Running tests with npm.
-- Using Git for version control.
-- Organizing and publishing a project on GitHub.
-
-## 👨‍💻 Author
-
-**Alexander Olivieri**
-
-Java Full Stack Developer in training.
