@@ -5,7 +5,7 @@
 ### Descripción del proyecto
 
 Proyecto de JavaScript desarrollado como parte de la evaluación del módulo de Desarrollo de Aplicaciones. Incluye funciones matemáticas, administración de usuarios y pruebas unitarias utilizando **Jest**.
-
+function divide(a, b) {
 ### Funcionalidades
 
 #### 1. Calculadora (`Calculator`)
@@ -40,7 +40,7 @@ Las pruebas contemplan:
 
 - Operaciones de la calculadora.
 - Multiplicación y división.
-- Manejo de división entre cero.
+test('divide 10 / 2 to equal 5', () => {
 - Agregar y eliminar usuarios.
 - Búsqueda de usuarios por correo electrónico e ID.
 - Casos donde no se encuentra un usuario.
