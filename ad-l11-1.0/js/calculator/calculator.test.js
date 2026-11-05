@@ -40,3 +40,24 @@ test('quadratic formula with one repeated solution', () => {
   expect(calculator.quadraticFormula(1, -4, 4)).toEqual([2, 2]);
 });
 
+test('divide 10 / 2 to equal 5', () => {
+  expect(calculator.divide(10, 2)).toBe(5);
+});
+
+test('divide 20 / 4 to equal 5', () => {
+  expect(calculator.divide(20, 4)).toBe(5);
+});
+
+test('multiply 5 * 2 to equal 10', () => {
+  expect(calculator.multiply(5, 2)).toBe(10);
+});
+
+test('multiply -3 * 4 to equal -12', () => {
+  expect(calculator.multiply(-3, 4)).toBe(-12);
+});
+
+test('divide by zero should throw an error', () => {
+    expect(() => calculator.divide(10, 0))
+        .toThrow('No se puede dividir entre cero');
+});
+
