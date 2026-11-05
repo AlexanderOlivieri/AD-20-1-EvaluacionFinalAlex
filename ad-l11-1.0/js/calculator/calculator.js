@@ -12,10 +12,21 @@ function divide(a, b){
 function multiply(a, b){
   return a * b;
 }
+
 function average(numbers){
   const sum = numbers.reduce((total, number) => total + number, 0);
   return sum / numbers.length;
 }
 
+function factorial(number){
+  let result = 1;
+
+  for(let i = 1; i <= number; i++){
+    result *= i;
+  }
+
+  return result;
+}
+
 // When you want to use the divide or multiple function, remember to add it to the export here
-module.exports = {add: add, subtract: subtract, average: average};
+module.exports = {add: add, subtract: subtract, average: average, factorial: factorial};

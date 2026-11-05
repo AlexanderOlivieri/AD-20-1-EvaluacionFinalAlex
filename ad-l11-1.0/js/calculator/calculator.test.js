@@ -19,3 +19,12 @@ test('subtract -5 - -10 to equal 5', () => {
 test('average 10, 8 and 6 to equal 8', () => {
   expect(calculator.average([10, 8, 6])).toBe(8);
 });
+
+test('factorial of 5 to equal 120', () => {
+  expect(calculator.factorial(5)).toBe(120);
+});
+
+test('factorial of 0 to equal 1', () => {
+  expect(calculator.factorial(0)).toBe(1);
+});
+
